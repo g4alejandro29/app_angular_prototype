@@ -1,0 +1,20 @@
+.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.arrow-down {
+  position: absolute;
+  right: -20px;
+  top: 2px;
+}
+.link {
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+}
+li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  margin: 5px;
+  border-radius: 4px;
+}

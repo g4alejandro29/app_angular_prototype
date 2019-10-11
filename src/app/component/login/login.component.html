@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="content">
+    <p class="title is-4 has-text-centered">Iniciar sesión</p>
+  </div>
+  <div class="columns is-mobile">
+    <div
+      class="column is-4-desktop is-6-tablet is-10-mobile is-offset-4-desktop is-offset-3-tablet is-offset-1-mobile"
+    >
+      <form (ngSubmit)="onSubmit()" #customerForm="ngForm" autocomplete="off" novalidate>
+        <app-input
+          [label]="'Usuario'"
+          [isType]="'text'"
+          [isRequired]="true"
+          [value]="user"
+          [placeHolder]="'Ingrese usuario'"
+          (input)="updateUser($event.target.value)"
+          [isDanger]="userIsDanger()"
+          [error]="userError"
+          [isSuccess]="userIsSuccess()"
+          [icon]="'far fa-user'"
+        ></app-input>
+        <app-input
+          [label]="'contraseña'"
+          [isType]="'password'"
+          [isRequired]="true"
+          [value]="password"
+          [placeHolder]="'Ingrese contraseña'"
+          (input)="updatePassword($event.target.value)"
+          [isDanger]="passwordIsDanger()"
+          [error]="passwordError"
+          [isSuccess]="passwordIsSuccess()"
+          [icon]="'fas fa-unlock-alt'"
+        ></app-input>
+        <button
+          type="submit"
+          mat-button
+          class="button is-primary is-medium is-fullwidth"
+        >
+          Entrar
+        </button>
+      </form>
+      <div class="has-text-centered">
+        <a>Recuperar contraseña?</a>
+      </div>
+    </div>
+  </div>
+</div>

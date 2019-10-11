@@ -1,0 +1,24 @@
+<li *ngIf="itemsChildren.length === 0" routerLinkActive="active">
+  <a class="link" [routerLink]="['/page/' + path]">
+    <i [class]="iconLeft"></i>
+    {{ title }}
+  </a>
+</li>
+
+<li *ngIf="itemsChildren.length > 0">
+  <a class="link" (click)="showItem()">
+    <i [class]="iconLeft"></i>
+    {{ title }}
+    <i *ngIf="!show" class="fas fa-angle-down arrow-down"></i>
+    <i *ngIf="show" class="fas fa-angle-up arrow-down"></i>
+  </a>
+  <ul *ngIf="show" class="animated bounceInRight">
+    <app-navbar-item
+      *ngFor="let item of itemsChildren; let i = index"
+      [title]="item.name"
+      [itemsChildren]="item.children"
+      [path]="item.component"
+      [iconLeft]="item.icon"
+    ></app-navbar-item>
+  </ul>
+</li>

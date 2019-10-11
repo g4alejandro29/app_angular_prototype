@@ -1,0 +1,14 @@
+<mat-form-field class="input-width">
+  <mat-label>{{label}}</mat-label>
+  <input
+  matInput 
+  [type]="isType"
+  name="input"
+  [(ngModel)]="value"
+  [placeholder]="placeholder"
+  (change)="updateValue($event)"
+  [required]="isRequired"
+   />
+  <mat-icon *ngIf="icon" matSuffix><i [ngClass]="icon"></i></mat-icon>
+  <mat-hint *ngIf="error">{{error}}</mat-hint>
+</mat-form-field>

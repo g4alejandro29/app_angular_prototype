@@ -1,0 +1,31 @@
+<div class="navbar-container">
+  <div class="profile-container">
+    <div class="columns">
+      <div class="column is-4">
+        <i class="fas fa-user fa-2x"></i>
+      </div>
+      <div class="column is-8">
+        <h1>Alejandro</h1>
+      </div>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <ul>
+        <app-navbar-item
+          *ngFor="let item of option; let i = index"
+            [title]="item.name"
+            [itemsChildren]="item.children"
+            [path]="item.component"
+            [iconLeft]="item.icon"
+          ></app-navbar-item>
+        <li>
+          <a (click)="signOut()" class="link">
+            <i class="fas fa-sign-out-alt"></i>
+            Cerrar sesión
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

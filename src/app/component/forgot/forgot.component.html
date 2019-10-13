@@ -1,1 +1,46 @@
-<p>forgot works!</p>
+<div class="hero is-medium">
+  <div class="hero-body">
+    <div class="container">
+      <div class="content">
+        <p class="title is-4 has-text-centered">Recuperar contraseña</p>
+      </div>
+      <div class="columns is-mobile">
+        <div
+          class="column is-4-desktop is-6-tablet is-10-mobile is-offset-4-desktop is-offset-3-tablet is-offset-1-mobile"
+        >
+          <form
+            (ngSubmit)="onSubmit()"
+            #customerForm="ngForm"
+            autocomplete="off"
+            novalidate
+          >
+            <app-input
+              [label]="'Usuario'"
+              [isType]="'text'"
+              [isRequired]="true"
+              [value]="user"
+              [placeHolder]="'Ingrese usuario'"
+              (input)="updateUser($event.target.value)"
+              [isDanger]="userIsDanger()"
+              [error]="userError"
+              [isSuccess]="userIsSuccess()"
+              [icon]="'far fa-user'"
+            ></app-input>
+            <div
+              class="field is-grouped is-grouped-centered is-grouped-multiline"
+            >
+              <div class="control">
+                <a [routerLink]="['/login']" class="button">Cancelar</a>
+              </div>
+              <div class="control">
+                <button type="submit" mat-button class="button is-primary">
+                  Recuperar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

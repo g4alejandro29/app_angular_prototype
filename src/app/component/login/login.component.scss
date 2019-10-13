@@ -1,0 +1,17 @@
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.avatar{
+    width: 200px;
+    height: 200px;
+    background-image: url('../../../assets/image/user.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.avatar-container {
+    height: 200px;
+}

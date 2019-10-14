@@ -8,6 +8,14 @@ export const menu = [
         children: []
     },
     {
+        type: 'item',
+        icon: 'fas fa-calendar-alt',
+        name: 'Calendario',
+        component: 'calendar',
+        perms: ['*'],
+        children: []
+    },
+    {
         type: 'group',
         icon: 'fas fa-tools',
         name: 'Administración',

@@ -6,7 +6,7 @@ import { LoginComponent } from '../component/login/login.component'
 import { DashboardComponent } from '../component/dashboard/dashboard.component'
 import { PageNotFoundComponent } from '../component/page-not-found/page-not-found.component'
 import { ForgotComponent } from '../component/forgot/forgot.component';
-
+import {CalendarComponent} from '../component/calendar/calendar.component'
 const routes: Routes = [
   {
     path: 'login',
@@ -33,6 +33,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent
+      },
+      {
+        path: 'calendar',
+        component: CalendarComponent
       }
     ]
   },

@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {ChartsModule} from 'ng2-charts'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './router/app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { PageComponent } from './component/page/page.component';
@@ -15,6 +16,7 @@ import { InputComponent } from './component/common/input/input.component';
 import { NavbarLeftComponent } from './component/navbar-left/navbar-left.component';
 
 import {FormsModule} from '@angular/forms'
+import { FullCalendarModule } from '@fullcalendar/angular'
 
 // material
 import {
@@ -27,6 +29,7 @@ import { LineChartComponent } from './component/common/line-chart/line-chart.com
 import { BarChartComponent } from './component/common/bar-chart/bar-chart.component';
 import { PieChartComponent } from './component/common/pie-chart/pie-chart.component';
 import { NavbarItemComponent } from './component/navbar-left/navbar-item/navbar-item.component';
+import { CalendarComponent } from './component/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,8 @@ import { NavbarItemComponent } from './component/navbar-left/navbar-item/navbar-
     LineChartComponent,
     BarChartComponent,
     PieChartComponent,
-    NavbarItemComponent
+    NavbarItemComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,8 @@ import { NavbarItemComponent } from './component/navbar-left/navbar-item/navbar-
     MatFormFieldModule,
     MatIconModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

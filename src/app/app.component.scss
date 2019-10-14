@@ -2,3 +2,16 @@ body {
     height: 100vh;
     background: #f4f3ef;
 }
+.fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number {
+    padding: 6px;
+    margin: 2px;
+    min-width:19px;
+    text-align: center;
+  
+}
+.fc-week .fc-day-top:hover .fc-day-number{
+    background-color: #ddd;
+    border-radius: 50% ;
+    color: #FFFFFF ;
+    transition: background-color 0.2s ;
+}

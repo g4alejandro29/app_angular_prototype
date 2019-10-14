@@ -1,0 +1,36 @@
+<div *ngIf="calendarOptions">
+<full-calendar
+  #calendar
+  [options]="calendarOptions"
+  defaultView="dayGridMonth"
+  [editable]="true"
+  eventLimit="true"
+  [plugins]="calendarPlugins"
+  [header]="{
+    left: 'prev,next today',
+    center: 'title',
+    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+  }"
+  (dateClick)="selectedDate($event)"
+  (eventDragStop)="eventDragStop($event)"
+  (dayRender)="dayRender($event,el)"
+  (eventClick)="eventClick($event)"
+  [buttonText]="{
+    today: 'Hoy',
+    month: 'Mes',
+    day: 'Día',
+    week: 'Semana'
+  }"
+  [slotLabelFormat]="{
+    hour: 'numeric',
+    minute: '2-digit',
+    meridiem: 'short'
+  }"
+  allDayText="Todo el día "
+  locale="es-es"
+  timezone="local"
+  [weekends]="calendarWeekends"
+  [events]="events"
+></full-calendar>
+
+</div>

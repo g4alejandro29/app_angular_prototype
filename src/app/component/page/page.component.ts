@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page.component.scss']
 })
 export class PageComponent implements OnInit {
-
+  showMenu: boolean = false
   constructor() { }
-
+  updateValue(e: boolean) {
+    this.showMenu = e
+  }
   ngOnInit() {
   }
 

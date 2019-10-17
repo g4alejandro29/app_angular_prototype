@@ -17,27 +17,25 @@
     </a>
   </div>
 </nav>
-<div class="show-mobil-menu">
-  <div *ngIf="setMenu" class=" animated bounceInRight navbar-mobil">
-    <div class="text-right text-white icon-close-menu">
-      <i class="far fa-times-circle fa-2x" (click)="showMenu()"></i>
-    </div>
-    <div class="container-nav-mobile">
-        <ul>
-            <app-navbar-item
-              *ngFor="let item of option; let i = index"
-                [title]="item.name"
-                [itemsChildren]="item.children"
-                [path]="item.component"
-                [iconLeft]="item.icon"
-              ></app-navbar-item>
-            <li>
-              <a (click)="signOut()" class="link">
-                <i class="fas fa-sign-out-alt"></i>
-                Cerrar sesión
-              </a>
-            </li>
-          </ul>
-    </div>
+<div [ngClass]="{'show-mobil-menu': setMenu}" class="container-show animated bounceInRight navbar-mobil">
+  <div class="text-right text-white icon-close-menu">
+    <i class="far fa-times-circle fa-2x" (click)="showMenu()"></i>
+  </div>
+  <div class="container-nav-mobile">
+    <ul>
+      <app-navbar-item
+        *ngFor="let item of option; let i = index"
+        [title]="item.name"
+        [itemsChildren]="item.children"
+        [path]="item.component"
+        [iconLeft]="item.icon"
+      ></app-navbar-item>
+      <li>
+        <a (click)="signOut()" class="link">
+          <i class="fas fa-sign-out-alt"></i>
+          Cerrar sesión
+        </a>
+      </li>
+    </ul>
   </div>
 </div>

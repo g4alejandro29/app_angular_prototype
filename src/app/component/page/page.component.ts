@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-page',
@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page.component.scss']
 })
 export class PageComponent implements OnInit {
-  showMenu: boolean = false
-  constructor() { }
-  updateValue(e: boolean) {
-    this.showMenu = e
+  showMenu: boolean;
+
+  constructor() {
   }
+
+  updateValue(e: boolean) {
+    this.showMenu = e;
+  }
+
   ngOnInit() {
   }
 

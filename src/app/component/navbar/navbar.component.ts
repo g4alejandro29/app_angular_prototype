@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {menu} from '../../../config/menu'
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {menu} from '../../../config/menu';
 
 @Component({
   selector: 'app-navbar',
@@ -7,17 +7,14 @@ import {menu} from '../../../config/menu'
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  private option = menu
-  setMenu: boolean = false
+  private option = menu;
+  setMenu: boolean;
 
-  constructor() { }
+  constructor() {
+  }
 
   showMenu() {
-    if (this.setMenu) {
-      this.setMenu = (false)
-    } else {
-      this.setMenu = (true)
-    }
+    this.setMenu = !this.setMenu;
   }
 
   ngOnInit() {

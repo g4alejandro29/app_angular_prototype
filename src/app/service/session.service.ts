@@ -1,26 +1,26 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SessionService {
-  constructor() { }
+  constructor() {
+  }
 
   setValueStorage(title: string, value: object) {
-    const session = JSON.stringify(value)
-    localStorage.setItem(title, session)
+    const session = JSON.stringify(value);
+    localStorage.setItem(title, session);
   }
 
   getValueStorage(title: string) {
-    const data = localStorage.getItem(title)
-    return data
+    return localStorage.getItem(title);
   }
 
   clearValueStorage(remove: string) {
-    localStorage.removeItem(remove)
+    localStorage.removeItem(remove);
   }
 
   removeValueStorage() {
-    localStorage.clear()
+    localStorage.clear();
   }
 }

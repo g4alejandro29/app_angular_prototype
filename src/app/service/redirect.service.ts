@@ -13,9 +13,7 @@ export class RedirectService {
 
   redirectToSession() {
     const data = this.session.getValueStorage('session')
-    if (data) {
-      this.router.navigate(['/page'])
-    } else {
+    if (!data) {
       this.router.navigate(['/login'])
     }
   }
